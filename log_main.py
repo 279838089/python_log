@@ -24,6 +24,7 @@ class LogMain(object):
                 self.io_read.copy_file(url2, url1)
                 print('Sent success')
             elif hit_email == 3:
+                self.io_read.copy_file(url2, url1)
                 print('No sent')
             elif hit_email == 2:
                 print('Sent fail')
@@ -33,13 +34,13 @@ class LogMain(object):
 
 if __name__ == '__main__':
     a = strftime("%Y-%m-%d", gmtime())
-    url1 = '/var/www/internalcsm/application/logs/log-%s.php' % a
-    url2 = '/var/www/internalcsm/application/logs/python_temp'
-    to_email = ['saier@sain3.com', '279838089@qq.com']
+    url2 = '/var/www/internalcsm/application/logs/log-%s.php' % a
+    url1 = '/var/www/internalcsm/application/logs/python_temp'
+    to_email = ['saier@sain3.com', 'allen.lai@sain3.com', '408827148@qq.com']
     title = 'Python自动监控'
     obj_log = LogMain('279838089@qq.com', 'rxojdkpncijubgeb', 'smtp.qq.com', 465)
     obj_log.log(url1, url2, to_email, title)
 
-    url3 = '/var/log/apache2/error.log'
-    url4 = '/var/log/apache2/python_temp'
+    url4 = '/var/log/apache2/error.log'
+    url3 = '/var/log/apache2/python_temp'
     obj_log.log(url3, url4, to_email, title)
