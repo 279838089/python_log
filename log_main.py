@@ -38,7 +38,7 @@ if __name__ == '__main__':
     url1 = '/var/www/internalcsm/application/logs/python_temp'
     to_email = ['saier@sain3.com', 'allen.lai@sain3.com', '408827148@qq.com']
     title = 'Python自动监控'
-    obj_log = LogMain('279838089@qq.com', 'rxojdkpncijubgeb', 'smtp.qq.com', 465)
+    obj_log = LogMain('279838089@qq.com', '', 'smtp.qq.com', 465)
     obj_log.log(url1, url2, to_email, title)
 
     url4 = '/var/log/apache2/error.log'
